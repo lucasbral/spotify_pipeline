@@ -1,0 +1,20 @@
+[2024-11-29T01:02:29.923+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-29T01:02:29.951+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipe.get_playlist manual__2024-11-29T01:02:26.022889+00:00 [queued]>
+[2024-11-29T01:02:29.963+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipe.get_playlist manual__2024-11-29T01:02:26.022889+00:00 [queued]>
+[2024-11-29T01:02:29.964+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-29T01:02:29.985+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): get_playlist> on 2024-11-29 01:02:26.022889+00:00
+[2024-11-29T01:02:29.996+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1512) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-29T01:02:29.998+0000] {standard_task_runner.py:72} INFO - Started process 1513 to run task
+[2024-11-29T01:02:30.003+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipe', 'get_playlist', 'manual__2024-11-29T01:02:26.022889+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp0_rw84cv']
+[2024-11-29T01:02:30.005+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask get_playlist
+[2024-11-29T01:02:30.072+0000] {task_command.py:467} INFO - Running <TaskInstance: pipe.get_playlist manual__2024-11-29T01:02:26.022889+00:00 [running]> on host 6bcbc17aec1f
+[2024-11-29T01:02:30.227+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipe' AIRFLOW_CTX_TASK_ID='get_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-29T01:02:26.022889+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-29T01:02:26.022889+00:00'
+[2024-11-29T01:02:30.228+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-29T01:02:30.692+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-29T01:02:30.712+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-29T01:02:30.713+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipe, task_id=get_playlist, run_id=manual__2024-11-29T01:02:26.022889+00:00, execution_date=20241129T010226, start_date=20241129T010229, end_date=20241129T010230
+[2024-11-29T01:02:30.775+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-29T01:02:30.817+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-29T01:02:30.820+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

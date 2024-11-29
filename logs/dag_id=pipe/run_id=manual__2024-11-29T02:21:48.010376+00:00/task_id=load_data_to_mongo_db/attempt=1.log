@@ -1,0 +1,22 @@
+[2024-11-29T02:21:54.219+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-29T02:21:54.245+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipe.load_data_to_mongo_db manual__2024-11-29T02:21:48.010376+00:00 [queued]>
+[2024-11-29T02:21:54.259+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipe.load_data_to_mongo_db manual__2024-11-29T02:21:48.010376+00:00 [queued]>
+[2024-11-29T02:21:54.259+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-29T02:21:54.278+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): load_data_to_mongo_db> on 2024-11-29 02:21:48.010376+00:00
+[2024-11-29T02:21:54.290+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1065) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-29T02:21:54.291+0000] {standard_task_runner.py:72} INFO - Started process 1066 to run task
+[2024-11-29T02:21:54.293+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipe', 'load_data_to_mongo_db', 'manual__2024-11-29T02:21:48.010376+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpmxtjvsjw']
+[2024-11-29T02:21:54.294+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask load_data_to_mongo_db
+[2024-11-29T02:21:54.365+0000] {task_command.py:467} INFO - Running <TaskInstance: pipe.load_data_to_mongo_db manual__2024-11-29T02:21:48.010376+00:00 [running]> on host 768115ef6318
+[2024-11-29T02:21:54.542+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipe' AIRFLOW_CTX_TASK_ID='load_data_to_mongo_db' AIRFLOW_CTX_EXECUTION_DATE='2024-11-29T02:21:48.010376+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-29T02:21:48.010376+00:00'
+[2024-11-29T02:21:54.543+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-29T02:21:54.561+0000] {base.py:84} INFO - Retrieving connection 'mongo'
+[2024-11-29T02:21:56.116+0000] {logging_mixin.py:190} INFO - connected to MongoDB - {'version': '8.0.3', 'gitVersion': '89d97f2744a2b9851ddfb51bdf22f687562d9b06', 'modules': ['enterprise'], 'allocator': 'tcmalloc-google', 'javascriptEngine': 'mozjs', 'sysInfo': 'deprecated', 'versionArray': [8, 0, 3, 0], 'bits': 64, 'debug': False, 'maxBsonObjectSize': 16777216, 'storageEngines': ['devnull', 'inMemory', 'queryable_wt', 'wiredTiger'], 'ok': 1.0, '$clusterTime': {'clusterTime': Timestamp(1732846915, 15), 'signature': {'hash': b'\xcd\x87=$\xdc\xbfgfR\xe4\xa0\xa1\xca\x02\xcd\xd7$\xd3*\xbd', 'keyId': 7406388102261899276}}, 'operationTime': Timestamp(1732846915, 15)}
+[2024-11-29T02:21:56.218+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-29T02:21:56.239+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-29T02:21:56.240+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pipe, task_id=load_data_to_mongo_db, run_id=manual__2024-11-29T02:21:48.010376+00:00, execution_date=20241129T022148, start_date=20241129T022154, end_date=20241129T022156
+[2024-11-29T02:21:56.311+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-29T02:21:56.338+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-29T02:21:56.340+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
